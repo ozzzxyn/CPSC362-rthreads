@@ -24,7 +24,7 @@ const Nav = () => {
         </div>
         <div className='mid_header'>
           <div className='logo'>
-            <img src='image/logo.png' alt='logo'></img>
+            <img src='image/logo2.png' alt='logo'></img>
           </div>
           <div className='search_box'>
             <input type='text' value ='' placeholder='search'></input>
@@ -86,7 +86,9 @@ const Nav = () => {
               <li><Link to='/about' className='link'>About Us</Link></li>
               <li><Link to='/contact' className='link'>Contact</Link></li>
             </ul>
-
+          </div>
+          <div className='offer'>
+            <p>Get 13% Off with Code: THREADS13</p>
           </div>
         </div>
     </div>
