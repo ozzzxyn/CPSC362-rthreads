@@ -12,5 +12,150 @@
 .home .top_banner
 {
     max-width: 100%;
-    background: url('http://localhost:3000/image/');
+    height: 700px;
+    background: url('http://localhost:3000/image/slide-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 60px;
+}
+
+.home .top_banner .content
+{
+    width: 100%;
+    position: relative;
+    top: 20%;
+    padding: 10px 50px;
+
+}
+
+.home .top_banner .content h3
+{
+    text-transform: capitalize;
+    color: #cd1e76;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.home .top_banner .content h2
+{
+    text-transform: uppercase;
+    color: #232323;
+    letter-spacing: 1px;
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.home .top_banner .content p
+{
+    color: #232323;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.home .top_banner .content .link
+{
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #fed700;
+    color: #232323;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.home .top_banner .content .link:hover
+{
+    color: #fed700;
+    background: #cd1e76;
+}
+
+.home .trending
+{
+    padding: 20px 30px;
+    width: 100%;
+
+}
+
+.home .trending .container
+{
+    max-width: 100%;
+    display: flex;
+
+}
+.home .trending .container .left_box
+{
+    padding: 10px 20px;
+    width: 75%;
+
+}
+
+.home .trending .container .left_box .header
+{
+    display: flex;
+    max-width: 100%;
+    padding: 10px 10px;
+    background: #f6f7f8;
+    justify-content: space-between;
+}
+
+.home .trending .container .left_box .header .heading h2
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #232323;
+    margin-top: 5px;
+}
+
+.home .trending .container .left_box .header .cate
+{
+    display: flex;
+    margin-top: 5px;
+}
+
+.home .trending .container .left_box .header .cate h3
+{
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #232323;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.home .trending .container .left_box .header .cate h3:hover
+{
+    color: #cd1e76;
+
+}
+
+.home .trending .container .left_box .products
+{
+    max-width: 100%;
+}
+.home .trending .container .left_box .products .container
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home .trending .container .left_box .products .container .box
+{
+    width: 250px;
+    height: 250px;
+    padding: 10px 10px;
+    border: 2px solid #f6f7f8;
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #f6f7f8;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.home .trending .container .left_box .products .container .box .img_box img
+{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 }
