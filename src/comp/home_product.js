@@ -31,6 +31,30 @@ const HomeProduct =
         image: "image/placeholder.webp",
         cat: '',
         type: 'featured',
+    },
+    {
+        id: 5,
+        Name: 'product5',
+        price: '56',
+        image: "image/placeholder.webp",
+        cat: '',
+        type: 'featured',
+    },
+    {
+        id: 6,
+        Name: 'product6',
+        price: '56',
+        image: "image/placeholder.webp",
+        cat: '',
+        type: 'featured',
+    },
+    {
+        id: 7,
+        Name: 'product7',
+        price: '56',
+        image: "image/placeholder.webp",
+        cat: '',
+        type: 'featured',
     }
 ]
 
