@@ -8,6 +8,7 @@ import { RxInstagramLogo } from "react-icons/rx";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
+import { FaCartShopping } from "react-icons/fa6";
 
 
 
@@ -15,6 +16,8 @@ import { IoShareSocial } from "react-icons/io5";
 const Home = () => {
     //Product category
     const [newProduct, setNewProduct] = useState([])
+    const [featuredProduct, setFeaturedProduct] = useState([])
+    const [topProduct, setTopProduct] = useState([])
     //Trending product
     const [trendingProduct, setTrendingProduct] = useState(HomeProduct)
     // Filter trending product
@@ -39,11 +42,26 @@ const Home = () => {
     })
     const productcategory = () =>
     {
+        // New product
         const newcategory = HomeProduct.filter((x) => 
         {
             return x.type === 'new'
         })
         setNewProduct(newcategory)
+
+        //Featured product
+        const FeaturedCategory = HomeProduct.filter((x) => 
+        {
+            return x.type === 'featured'
+        })
+        setFeaturedProduct(FeaturedCategory)
+
+        // Top Product
+        const TopCategory = HomeProduct.filter((x) => 
+        {
+            return x.type === 'top'
+        })
+        setTopProduct(TopCategory)
     }
     return (
     <>
@@ -189,7 +207,63 @@ const Home = () => {
                                         <div className='icon'>
                                             <button><FaRegEye /></button>
                                             <button><FaHeart /></button>
-                                            <button></button>
+                                            <button><FaCartShopping /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </>
+                            )
+                        })
+                    }
+                </div>
+                <div className='box'>
+                    <div className='header'>
+                        <h2>Featured Product</h2>
+                    </div>
+                    {
+                        featuredProduct.map((curElm) =>
+                        {
+                            return(
+                                <>
+                                <div className='productbox'>
+                                    <div className='img-box'>
+                                        <img src={curElm.image} alt=''></img>
+                                    </div>
+                                    <div className='detail'>
+                                        <h3>{curElm.Name}</h3>
+                                        <p>$ {curElm.price}</p>
+                                        <div className='icon'>
+                                            <button><FaRegEye /></button>
+                                            <button><FaHeart /></button>
+                                            <button><FaCartShopping /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </>
+                            )
+                        })
+                    }
+                </div>
+                <div className='box'>
+                    <div className='header'>
+                        <h2>Top Product</h2>
+                    </div>
+                    {
+                        topProduct.map((curElm) =>
+                        {
+                            return(
+                                <>
+                                <div className='productbox'>
+                                    <div className='img-box'>
+                                        <img src={curElm.image} alt=''></img>
+                                    </div>
+                                    <div className='detail'>
+                                        <h3>{curElm.Name}</h3>
+                                        <p>$ {curElm.price}</p>
+                                        <div className='icon'>
+                                            <button><FaRegEye /></button>
+                                            <button><FaHeart /></button>
+                                            <button><FaCartShopping /></button>
                                         </div>
                                     </div>
                                 </div>

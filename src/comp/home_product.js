@@ -54,7 +54,15 @@ const HomeProduct =
         price: '56',
         image: "image/placeholder.webp",
         cat: '',
-        type: 'featured',
+        type: 'top',
+    },
+    {
+        id: 8,
+        Name: 'product8',
+        price: '5655',
+        image: "image/placeholder.webp",
+        cat: '',
+        type: 'top',
     }
 ]
 
