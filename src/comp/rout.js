@@ -4,12 +4,12 @@ import Home from './home';
 import Shop from './shop';
 
 
-const Rout = ({shop}) => {
+const Rout = ({shop, Filter, allcatefilter}) => {
   return (
     <>
     <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='Shop' element={<Shop shop={shop}/>} />
+        <Route path='Shop' element={<Shop shop={shop} Filter={Filter} allcatefilter={allcatefilter}/>} />
     </Routes>
     </>
   )

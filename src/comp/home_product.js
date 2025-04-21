@@ -5,7 +5,7 @@ const HomeProduct =
         Name: 'product1',
         price: '26',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'pants',
         type: 'new',
     },
     {
@@ -13,7 +13,7 @@ const HomeProduct =
         Name: 'product4',
         price: '46',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'pants',
         type: 'new',
     },
     {
@@ -21,7 +21,7 @@ const HomeProduct =
         Name: 'product4',
         price: '56',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'shirt',
         type: 'featured',
     },
     {
@@ -29,7 +29,7 @@ const HomeProduct =
         Name: 'product4',
         price: '76',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'jacket',
         type: 'featured',
     },
     {
@@ -37,7 +37,7 @@ const HomeProduct =
         Name: 'product5',
         price: '56',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'flannel',
         type: 'featured',
     },
     {
@@ -45,7 +45,7 @@ const HomeProduct =
         Name: 'product6',
         price: '56',
         image: "image/placeholder.webp",
-        cat: '',
+        cat: 'flannel',
         type: 'featured',
     },
     {

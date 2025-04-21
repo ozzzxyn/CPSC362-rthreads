@@ -8,11 +8,24 @@ import HomeProduct from './comp/home_product'
 const App = () => {
   //Shop Page product\
   const [shop, setShop] = useState(HomeProduct)
+  //Shop category filter
+  const Filter = (x) =>
+  {
+    const catefilter = HomeProduct.filter((product) =>
+    {
+      return product.cat === x
+    })
+    setShop(catefilter)
+  }
+  const allcatefilter = () =>
+  {
+    setShop(HomeProduct)
+  }
   return (
     <>
     <BrowserRouter>
     <Nav />
-    <Rout shop={shop}/>
+    <Rout shop={shop} Filter={Filter} allcatefilter={allcatefilter}/>
     <Footer />
     </BrowserRouter>
     </>

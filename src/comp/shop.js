@@ -3,7 +3,7 @@ import './shop.css'
 import { FaHeart } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 
-const Shop = ({shop}) => {
+const Shop = ({shop, Filter, allcatefilter}) => {
   return (
     <>
     <div className='shop'>
@@ -17,10 +17,11 @@ const Shop = ({shop}) => {
                     </div>
                     <div className='box'>
                         <ul>
-                            <li># Pants</li>
-                            <li># Shirt</li>
-                            <li># Jacket</li>
-                            <li># Flannels</li>
+                            <li onClick={() => allcatefilter ()}># All</li>
+                            <li onClick={() => Filter ("Pants")}># Pants</li>
+                            <li onClick={() => Filter ("Shirt")}># Shirt</li>
+                            <li onClick={() => Filter ("Jacket")}># Jacket</li>
+                            <li onClick={() => Filter ("Flannels")}># Flannels</li>
                         </ul>
                     </div>
                 </div>
@@ -51,6 +52,11 @@ const Shop = ({shop}) => {
                                                 <li><FaHeart /></li>
                                                 <li><FaRegEye /></li>
                                             </div>
+                                        </div>
+                                        <div className='detail'>
+                                            <h3>{curElm.Name}</h3>
+                                            <p>$ {curElm.price}</p>
+                                            <button>Add To Cart</button>
                                         </div>
                                     </div>
                                     </>
