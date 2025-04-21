@@ -3,7 +3,7 @@ import './shop.css'
 import { FaHeart } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 
-const Shop = ({shop, Filter, allcatefilter}) => {
+const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
   return (
     <>
     <div className='shop'>
@@ -56,7 +56,7 @@ const Shop = ({shop, Filter, allcatefilter}) => {
                                         <div className='detail'>
                                             <h3>{curElm.Name}</h3>
                                             <p>$ {curElm.price}</p>
-                                            <button>Add To Cart</button>
+                                            <button onClick={() => addtocart(curElm)}>Add To Cart</button>
                                         </div>
                                     </div>
                                     </>

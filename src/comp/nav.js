@@ -27,7 +27,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
             <img src='image/logo2.png' alt='logo'></img>
           </div>
           <div className='search_box'>
-            <input type='text' value ={search} placeholder='search' onChange={(e) => setSearch(e.target.value)}></input>
+            <input type='text' value ={search} placeholder='Search' onChange={(e) => setSearch(e.target.value)}></input>
             <button onClick={searchproduct}><FiSearch /></button>
           </div>
           {
@@ -82,7 +82,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
             <ul>
               <li><Link to='/' className='link'>Home</Link></li>
               <li><Link to='/shop' className='link'>Shop</Link></li>
-              <li><Link to='/collection' className='link'>Collection</Link></li>
+              <li><Link to='/collection' className='link'>Cart</Link></li>
               <li><Link to='/about' className='link'>About Us</Link></li>
               <li><Link to='/contact' className='link'>Contact</Link></li>
             </ul>
