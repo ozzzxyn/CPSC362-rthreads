@@ -62,7 +62,7 @@ const addtocart = (product) =>
     <>
     <BrowserRouter>
     <Nav search={search} setSearch={setSearch} searchproduct={searchproduct}/>
-    <Rout cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>
+    <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>
     <Footer />
     </BrowserRouter>
     </>

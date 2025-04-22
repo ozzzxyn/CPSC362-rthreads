@@ -5,12 +5,12 @@ import Shop from './shop';
 import Cart from './cart';
 
 
-const Rout = ({shop, Filter, allcatefilter, addtocart, cart}) => {
+const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart}) => {
   return (
     <>
     <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/cart' element={<Cart cart={cart}/>} />
+        <Route path='/' element={<Home addtocart={addtocart}/>}/>
+        <Route path='/collection' element={<Cart cart={cart} setCart={setCart}/>} />
         <Route path='Shop' element={<Shop shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>} />
     </Routes>
     </>

@@ -13,7 +13,7 @@ import { FaCartShopping } from "react-icons/fa6";
 
 
 
-const Home = () => {
+const Home = ({addtocart}) => {
     //Product category
     const [newProduct, setNewProduct] = useState([])
     const [featuredProduct, setFeaturedProduct] = useState([])
@@ -109,7 +109,7 @@ const Home = () => {
                                             <div className='info'>
                                                 <h3>{curElm.Name}</h3>
                                                 <p>${curElm.price}</p>
-                                                <button className='btn'>Add to Cart</button>
+                                                <button className='btn' onClick={() => addtocart (curElm)}>Add to Cart</button>
                                             </div>
                                         </div>
                                         </>
@@ -263,7 +263,7 @@ const Home = () => {
                                         <div className='icon'>
                                             <button><FaRegEye /></button>
                                             <button><FaHeart /></button>
-                                            <button><FaCartShopping /></button>
+                                            <button onClick={() => addtocart (curElm)}><FaCartShopping /></button>
                                         </div>
                                     </div>
                                 </div>

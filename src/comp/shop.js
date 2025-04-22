@@ -1,11 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './shop.css'
 import { FaHeart } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
+import { FaWindowClose } from "react-icons/fa";
 
 const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
+    // Toggle product detail
+    const [showDetail, setShowDetail] = useState(false)
+    // detail page data
+    const [detail, setDetail] = useState([])
+    //showing details
+    const detailpage = (product) =>
+    {
+        const detaildata = ([{product}])
+        const productdetail = detaildata[0]['product']
+        setDetail([{product}])
+        setDetail(productdetail)
+        setShowDetail(true)
+    }
+    const closedetail = () =>
+    {
+        setShowDetail(false)
+    }
   return (
     <>
+    {
+        showDetail ?
+        <>
+        <div className='product_detail'>
+            <button className='close_btn' onClick={closedetail}><FaWindowClose /></button>
+            <div className='container'>
+                <div className='img_box'>
+                    <img src={detail.image} alt=''></img>
+                </div>
+                <div className='info'>
+                    <h4># {detail.cat}</h4>
+                    <h2>{detail.Name}</h2>
+                    <p>ersffaewfaew</p>
+                    <h3>${detail.price}</h3>
+                    <button onClick={() => addtocart(detail)}>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        </>
+        : null
+    }
+    
     <div className='shop'>
         <h2># Shop</h2>
         <p>Home . Shop</p>
@@ -50,7 +90,7 @@ const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
                                             <img src={curElm.image} alt=''></img>
                                             <div className='icon'>
                                                 <li><FaHeart /></li>
-                                                <li><FaRegEye /></li>
+                                                <li onClick={() => detailpage (curElm)}><FaRegEye /></li>
                                             </div>
                                         </div>
                                         <div className='detail'>
