@@ -58,10 +58,10 @@ const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
                     <div className='box'>
                         <ul>
                             <li onClick={() => allcatefilter ()}># All</li>
-                            <li onClick={() => Filter ("Pants")}># Pants</li>
-                            <li onClick={() => Filter ("Shirt")}># Shirt</li>
-                            <li onClick={() => Filter ("Jacket")}># Jacket</li>
-                            <li onClick={() => Filter ("Flannels")}># Flannels</li>
+                            <li onClick={() => Filter ("pants")}># Pants</li>
+                            <li onClick={() => Filter ("shirt")}># Shirt</li>
+                            <li onClick={() => Filter ("jacket")}># Jacket</li>
+                            <li onClick={() => Filter ("flannel")}># Flannels</li>
                         </ul>
                     </div>
                 </div>
