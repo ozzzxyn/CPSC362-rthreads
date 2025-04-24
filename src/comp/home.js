@@ -36,10 +36,11 @@ const Home = ({addtocart}) => {
     }
 
     //Product Type
-    useEffect(() =>
+    /*useEffect(() =>
     {
         productcategory()
     })
+        */
     const productcategory = () =>
     {
         // New product
