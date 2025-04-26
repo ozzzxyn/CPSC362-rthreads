@@ -80,7 +80,7 @@ const Contact = () => {
                             <input type='text' placeholder='Name' value={user.Message} name='Message' onChange={data}></input>
                         </div>
                     </div>
-                    <button type='sublit' onClick={send}>Send</button>
+                    <button type='submit' onClick={send}>Send</button>
                 </form>
             </div>
         </div>
