@@ -77,7 +77,7 @@ const Contact = () => {
                             <h4>Message</h4>
                         </div>
                         <div className='input'>
-                            <input type='text' placeholder='Name' value={user.Message} name='Message' onChange={data}></input>
+                            <input type='text' placeholder='Message' value={user.Message} name='Message' onChange={data}></input>
                         </div>
                     </div>
                     <button type='submit' onClick={send}>Send</button>
