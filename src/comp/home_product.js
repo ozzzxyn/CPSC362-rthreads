@@ -6,6 +6,7 @@ const HomeProduct =
         price: '26',
         image: "image/product1.png",
         cat: 'shirt',
+        disc: 'A confortable shirt',
         type: 'new',
     },
     {
@@ -13,7 +14,8 @@ const HomeProduct =
         Name: 'product2',
         price: '46',
         image: "image/product2.png",
-        cat: 'pants',
+        cat: 'flannel',
+        disc: 'A confortable Flannel',
         type: 'new',
     },
     {
@@ -21,7 +23,8 @@ const HomeProduct =
         Name: 'product3',
         price: '56',
         image: "image/product3.png",
-        cat: 'shirt',
+        cat: 'jacket',
+        disc: 'A confortable Jacket',
         type: 'featured',
     },
     {
@@ -30,6 +33,7 @@ const HomeProduct =
         price: '76',
         image: "image/placeholder.webp",
         cat: 'jacket',
+        disc: 'Insert Disc',
         type: 'featured',
     },
     {
@@ -38,6 +42,7 @@ const HomeProduct =
         price: '56',
         image: "image/placeholder.webp",
         cat: 'flannel',
+        disc: 'Insert Disc',
         type: 'featured',
     },
     {
@@ -46,6 +51,7 @@ const HomeProduct =
         price: '56',
         image: "image/placeholder.webp",
         cat: 'flannel',
+        disc: 'Insert Disc',
         type: 'featured',
     },
     {
@@ -54,6 +60,7 @@ const HomeProduct =
         price: '56',
         image: "image/placeholder.webp",
         cat: '',
+        disc: 'Insert Disc',
         type: 'top',
     },
     {
@@ -62,6 +69,7 @@ const HomeProduct =
         price: '5655',
         image: "image/placeholder.webp",
         cat: '',
+        disc: 'Insert Disc',
         type: 'top',
     }
 ]
