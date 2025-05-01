@@ -103,7 +103,7 @@ const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
                 <div className='Total'>
                     <h4>Sub Total: ${total}</h4>
                 </div>
-                <buttom>Checkout</buttom>
+                <button>Checkout</button>
                 </>
             }
         </div>
