@@ -2,8 +2,9 @@
 {
     margin: 0;
     padding: 0;
-    font-family: sams-serif;
+    font-family: "Oxygen";
     box-sizing: border-box;
+    
 }
 .home
 {
@@ -31,9 +32,10 @@
 .home .top_banner .content h3
 {
     text-transform: capitalize;
-    color: #cd1e76;
+    color: #a42024;
     font-weight: 300;
     letter-spacing: 1px;
+    font-family: "Oxygen";
 }
 
 .home .top_banner .content h2
@@ -43,6 +45,7 @@
     letter-spacing: 1px;
     font-size: 42px;
     margin-top: 10px;
+    font-family: "Oxygen";
 }
 
 .home .top_banner .content p
@@ -51,29 +54,33 @@
     letter-spacing: 1px;
     margin-top: 10px;
     margin-bottom: 30px;
+    font-family: "Oxygen";
 }
 
 .home .top_banner .content .link
 {
     margin-top: 30px;
     padding: 10px 30px;
-    background: #fed700;
-    color: #232323;
+    background: #a42024;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.5s;
+    font-family: "Oxygen";
 }
 
 .home .top_banner .content .link:hover
 {
-    color: #fed700;
-    background: #cd1e76;
+    color: #ffffff;
+    background: #f02e3a;
+    font-family: "Oxygen";
 }
 
 .home .trending
 {
     padding: 20px 30px;
     width: 100%;
+    
 
 }
 
@@ -81,6 +88,7 @@
 {
     max-width: 100%;
     display: flex;
+    
 
 }
 .home .trending .container .left_box
@@ -106,12 +114,14 @@
     color: #232323;
     margin-top: 5px;
     cursor: pointer;
+    font-family: "Oxygen";
 }
 
 .home .trending .container .left_box .header .cate
 {
     display: flex;
     margin-top: 5px;
+    
 }
 
 .home .trending .container .left_box .header .cate h3
@@ -127,7 +137,7 @@
 
 .home .trending .container .left_box .header .cate h3:hover
 {
-    color: #cd1e76;
+    color: #f02e3a;
 
 }
 
@@ -209,7 +219,7 @@
 .home .trending .container .left_box .products .container .box .img_box .icon .icon_box:hover
 {
     color: #fff;
-    background: #cd1e76;
+    background: #f02e3a;
 }
 
 .home .trending .container .left_box .products .container .box .info
@@ -222,14 +232,14 @@
 {
     text-transform: uppercase;
     font-size: 14px;
-    color: #cd1e76;
+    color: #000000;
     font-weight: 300;
     letter-spacing: 1px;
 }
 
 .home .trending .container .left_box .products .container .box .info p
 {
-    color: #cd1e76;
+    color: #f02e3a;
     margin-top: 5px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -243,8 +253,8 @@
     border: none;
     background: none;
     outline: none;
-    background: #fed700;
-    color: #232323;
+    background: #a42024;
+    color: #ffffff;
     text-transform: capitalize;
     border-radius: 5px;
     cursor: pointer;
@@ -253,7 +263,7 @@
 
 .home .trending .container .left_box .products .container .box .info .btn:hover
 {
-    background: #cd1e76;
+    background: #f02e3a;
     color: #f6f7f8;
 
 }
@@ -388,14 +398,19 @@
 {
     margin-top: 10px;
     margin-left: 135px;
-    padding: 10px 30px;
+    padding: 10px 25px;
     border: none;
     background: none;
     outline: none;
-    background: #fed700;
-    color: #232323;
+    background: #a42024;
+    color: #ffffff;
     font-weight: 600;
     cursor: pointer;
+}
+.home .trending .container .right_box .right_container .newsletter .form button:hover
+{
+    background: #f02e3a;
+    transition: 0.6s;
 }
 
 .home .trending .container .right_box .right_container .newsletter .form .icon_box
@@ -411,8 +426,8 @@
 {
     padding: 8px 10px;
     border-radius: 50%;
-    border: 2px solid #cd1e76;
-    color: #cd1e76;
+    border: 2px solid #a42024;
+    color: #a42024;
     margin-bottom: 30px;
     cursor: pointer;
     transition: 0.5s;
@@ -421,7 +436,7 @@
 .home .trending .container .right_box .right_container .newsletter .form .icon_box .icon:hover
 {
     color: #fff;
-    background: #cd1e76;
+    background: #f02e3a;
 }
 
 .home .banners

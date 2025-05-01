@@ -118,7 +118,6 @@ const Home = ({addtocart}) => {
                                 })
                             }
                         </div>
-                        <button>Show More</button>
                     </div>
                 </div>
                 <div className='right_box'>

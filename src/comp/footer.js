@@ -51,8 +51,7 @@ const Footer = () => {
             </div>
             <div className='right_box'>
                 <div className='header'>
-                    <img src='image/logo2.png' alt=''></img>
-                    <p>Lorem ipsum</p>
+                    <img src='image/logo_cpsc362_23.png' alt=''></img>
                 </div>
                 <div className='bottom'>
                     <div className='box'>

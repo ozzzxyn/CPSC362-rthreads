@@ -62,19 +62,22 @@
 }
 .footer .container .right_box
 {
-    padding: 10px 20px;
-    width: 69%;
+    padding: 10px 30px;
+    width: 30%;
 }
 
 .footer .container .right_box .header
 {
-    max-width: 100%;
+    max-width: 75%;
+    height: 200px;
     align-items: center;
 }
 
 .footer .container .right_box .header img
 {
-    margin-left: 40%;
+    width: 261px;
+    height: 188px;
+    margin-left: 3%;
 }
 
 .footer .container .right_box .header p
@@ -97,7 +100,7 @@
 
 .footer .container .right_box .bottom .box
 {
-    padding: 10px 20px;
+    padding: 10px 30px;
 }
 
 .footer .container .right_box .bottom .box h3
