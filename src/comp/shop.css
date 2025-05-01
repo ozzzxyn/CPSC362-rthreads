@@ -74,6 +74,7 @@
 .shop .container .left_box .category .box ul
 {
     max-width: 100%;
+    
 }
 
 .shop .container .left_box .category .box ul li
@@ -84,15 +85,17 @@
     margin-top: 10px;
     font-size: 14px;
     font-weight: 600;
-    color: #8a8a8a;
+    color: #433f3f;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.5s;
+    font-family: "Oxygen";
+    font-weight: 500;
 }
 
 .shop .container .left_box .category .box ul li:hover
 {
-    color: #232323;
+    color: #b82831;
 }
 .shop .container .left_box .banner
 {
@@ -128,11 +131,13 @@
 
 .shop .container .right_box .product_box h2
 {
+    font-family: Oxygen;
     color: #232323;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 22px;
+    font-size: 26px;
     margin-top: 10px;
+    font-weight: 700;
 }
 
 .shop .container .right_box .product_box .product_container
@@ -152,6 +157,7 @@
     border: 3px solid #f6f6f6;
     margin-left: 15px;
     margin-top: 20px;
+    border-radius: 10px;
 }
 .shop .container .right_box .product_box .product_container .box .img_box
 {
@@ -169,8 +175,20 @@
     flex-direction: column;
     padding: 10px 10px;
     margin-top: 10px;
-    margin-left: -40px;
+    margin-left: 5px;
     transition: 0.5s;
+    scale: .5;
+}
+
+.shop .container .right_box .product_box .product_container .box:hover .img_box .icon
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-left: -45px;
+    transition: 0.5s;
+    scale: 1;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon li
@@ -179,16 +197,26 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px 10px;
     margin-top: 10px;
-    color: #8a8a8a;
+    color: #a42028;
     background: #fff;
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 10px;
+    
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon li:hover
 {
     color: #fff;
-    background: #cd1e76;
+    background: #f02f40;
+}
+
+.shop .container .right_box .product_box .product_container .box .img_box .icon li:active
+{
+    
+    background-color: #2ff04c;
+    transition: .1s;
+
 }
 
 .shop .container .right_box .product_box .product_container .box:hover .img_box .icon
@@ -204,7 +232,7 @@
 .shop .container .right_box .product_box .product_container .box .detail h3
 {
     text-align: center;
-    color: #232323;
+    color: #000000;
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
@@ -212,29 +240,36 @@
 
 .shop .container .right_box .product_box .product_container .box .detail p
 {
-    margin-top: 5px;
+    font-family: Oxygen;
+    margin-top: 2px;
     text-align: center;
-    color: #cd1e76;
+    color: #a42028;
     font-size: 16px;
 }
 
 .shop .container .right_box .product_box .product_container .box .detail button
 {
-    margin-top: 10px;
-    margin-left: 28%;
+    margin-top: 8px;
+    display: flex;
+    margin-left: 27%;
     padding: 10px 20px;
     border: none;
     outline: none;
-    color: #232323;
-    background: #fed700;
+    color: white;
+    background: #a42028;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+
 }
 
 .shop .container .right_box .product_box .product_container .box .detail button:hover
 {
-    color: #fed700;
-    background: #232323;
+    color: #ffffff;
+    background: #f02f40;
+    transition: 0.5s;
+    scale: 1.15;
 }
 
 .product_detail
@@ -249,6 +284,8 @@
     border: 1px solid #f6f6f6;
     border-radius: 5px;
     padding: 20px 30px;
+    display: block;
+    z-index: 10;
 }
 
 .product_detail .close_btn
@@ -266,6 +303,7 @@
 {
     width: 100%;
     display: flex;
+    
 }
 
 .product_detail .container .img_box

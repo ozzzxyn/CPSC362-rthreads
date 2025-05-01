@@ -100,9 +100,25 @@
 
 .header .mid_header .user .icon
 {
-    margin-right: 10px;
+    padding-right: 37px;
+    display: flex;
+    /*margin-right: 16px;*/
+    margin-top: 72px;
+    scale: 2.5;
+    animation: moveLeftRight 2s ease infinite;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
     
-    
+    transform: translateX(0);
+  }
 }
 
 .header .mid_header .user .icon .btn button
@@ -116,6 +132,7 @@
 
 .header .mid_header .user .btn button
 {
+    
     background-color: white;
     border: white;
     width: 100px;
@@ -124,6 +141,8 @@
     font-size: 17px;
     font-family: Oxygen;
     font-weight: 550;
+    transition: 0.7s;
+    scale: 1;
 }
 .header .mid_header .user .btn button:hover
 {
@@ -131,8 +150,7 @@
     background-color: black;
     color: white;
     transition: 0.7s;
-    scale: 1.3;
-
+    scale: 1.115
 }
 .header .last_header
 {
@@ -212,7 +230,8 @@
 
 .header .last_header .nav ul .link:hover
 {
-    color: #c7c7c7;
+    color: #a42028;
+    
 }
 .header .last_header .offer
 {

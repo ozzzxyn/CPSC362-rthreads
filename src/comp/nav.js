@@ -48,7 +48,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
               <IoMdLogIn />
             </div>
             <div className='btn'>
-              <button onClick={() => loginWithRedirect()}>Login</button>
+              <button onClick={() => loginWithRedirect()}><span>Login</span></button>
             </div>
           </div>
           }
