@@ -1,0 +1,28 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #a42024;
+    margin-bottom: 2rem;
+  }
+  
+  .about-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-signoff {
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  

@@ -1,0 +1,41 @@
+.thanks-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.thanks-container button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    background: #fed700;
+    color: #232323;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+  
+.thanks-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #a42024;
+    margin-bottom: 2rem;
+}
+  
+.thanks-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+  
+.thanks-signoff {
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+  
