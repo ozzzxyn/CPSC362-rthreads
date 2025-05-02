@@ -1,10 +1,6 @@
 import React from 'react'
 import './payment.css'
 import { Link } from 'react-router-dom'
-import { FaWindowClose } from "react-icons/fa";
-
-
-
 
 const Payment = ({cart, setCart}) => {
 //Total price
