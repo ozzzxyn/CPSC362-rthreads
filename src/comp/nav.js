@@ -25,7 +25,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
         <div className='mid_header'>
           <Link to='/' className='link'>
             <div className='logo'>
-              <img src='image/logo_cpsc362_23.png' alt='logo'></img>
+              <img src='image/logo_cpsc362_232.png' alt='logo'></img>
             </div>
           </Link>
           <div className='search_box'>

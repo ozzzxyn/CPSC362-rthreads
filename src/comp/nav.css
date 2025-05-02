@@ -40,14 +40,17 @@
 .header .mid_header
 {
     display: flex;
-    padding: 5px 40px;
+    padding: 0px 40px;
     max-width: 100%;
     justify-content: space-between;
 }
 .header .mid_header .logo img
 {
     height: 100%;
-    width: 250px;
+    width: 235px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    scale: .85;
     cursor: pointer;
     object-fit: cover;
      
@@ -64,7 +67,15 @@
     width: 250px;
     border: none;
     border: 1px solid #ffffff;
+    color: white;
+    font-weight: bold;
 }
+
+.header .mid_header .search_box input::placeholder
+{
+    color: rgb(195, 195, 195);
+}
+
 .header .mid_header .search_box button
 {
     padding: 10px 10px;
@@ -81,6 +92,7 @@
     margin-right: 30px;
     transition: 0.5s;
     font-weight: 600;
+    
 }
 
 .header .mid_header .search_box button:hover
@@ -103,9 +115,9 @@
     padding-right: 37px;
     display: flex;
     /*margin-right: 16px;*/
-    margin-top: 72px;
+    margin-top: 93px;
     scale: 2.5;
-    animation: moveLeftRight 2s ease infinite;
+    animation: moveLeftRight 2.5s ease-in-out infinite;
 }
 
 @keyframes moveLeftRight {
@@ -143,6 +155,7 @@
     font-weight: 550;
     transition: 0.7s;
     scale: 1;
+    margin-top: 20px;
 }
 .header .mid_header .user .btn button:hover
 {
@@ -243,9 +256,9 @@
 
 .header .last_header .offer p
 {
-    margin-top: 5px;
+    margin-top: 10px;
     text-transform: uppercase;
     color: #232323;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
 }

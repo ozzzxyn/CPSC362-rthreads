@@ -250,7 +250,7 @@
 }
 .home .trending .container .left_box .products .container .box .info .btn
 {
-    margin-top: 13px;
+    margin-top: 10px;
     align-items: center;
     padding: 5px 20px;
     margin-left: 41px;
@@ -263,6 +263,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
+    scale: 1;
 }
 
 .home .trending .container .left_box .products .container .box .info .btn:hover
@@ -411,11 +412,15 @@
     color: #ffffff;
     font-weight: 600;
     cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    scale: 1;
 }
 .home .trending .container .right_box .right_container .newsletter .form button:hover
 {
     background: #f02e3a;
-    transition: 0.6s;
+    transition: 0.5s;
+    scale: 1.2;
 }
 
 .home .trending .container .right_box .right_container .newsletter .form .icon_box
@@ -435,13 +440,15 @@
     color: #a42024;
     margin-bottom: 30px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
+    scale: 1.25;
 }
 
 .home .trending .container .right_box .right_container .newsletter .form .icon_box .icon:hover
 {
     color: #fff;
     background: #f02e3a;
+    scale: 1.75;
 }
 
 .home .banners
