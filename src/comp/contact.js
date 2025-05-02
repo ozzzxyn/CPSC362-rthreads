@@ -53,7 +53,7 @@ const Contact = () => {
                             <h4>Name</h4>
                         </div>
                         <div className='input'>
-                            <input type='text' placeholder='Name' value={user.Message} name='name' onChange={data}></input>
+                            <input type='text' placeholder='Name' value={user.Nameef} name='Name' onChange={data}></input>
                         </div>
                     </div>
                     <div className='box'>
