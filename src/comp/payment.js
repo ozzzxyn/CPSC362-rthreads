@@ -10,25 +10,13 @@ const Payment = ({cart, setCart}) => {
 //Total price
 const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
 
-const removeproduct = (product) =>
+
+const clearcart = () =>
     {
-        const exist = cart.find((x) =>
-        {
-            return x.id === product.id
-        })
-        if(exist.qty > 0)
-        {
-            setCart(cart.filter((curElm) =>
+        setCart(cart.filter(() =>
             {
                 return false
             }))
-        }
-    }
-const clearcart = () =>
-    {
-        cart.map((curElm) => {
-            removeproduct(curElm)
-        })
     }
 
   return (
