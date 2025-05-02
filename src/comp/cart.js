@@ -29,7 +29,7 @@ const Cart = ({cart, setCart}) => {
             })
             setCart(cart.map((curElm) => 
             {
-                return curElm.id === product.id ? {...exist, qty: exist.qty - 1 }: curElm
+                return curElm.id === product.id ? {...exist, qty: Math.max(exist.qty - 1) }: curElm
             }))
         }
 
