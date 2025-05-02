@@ -1,3 +1,11 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Oxygen";
+    box-sizing: border-box;
+}
+
 .thanks-container {
     max-width: 800px;
     margin: 0 auto;
@@ -7,14 +15,20 @@
 .thanks-container button {
     padding: 10px 30px;
     border: none;
+    border-radius: 10px;
     outline: none;
     background: none;
-    background: #fed700;
-    color: #232323;
+    background: #a42028;
+    color: #fff;
     font-weight: 600;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.thanks-container button:hover {
+    background: #f02e3a;
+    color: #ffffff;
 }
   
 .thanks-title {
