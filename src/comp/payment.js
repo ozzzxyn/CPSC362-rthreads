@@ -68,7 +68,7 @@ const clearcart = () =>
                                 <h4>Payment</h4>
                             </div>
                             <div className='input'>
-                                <input type='password' placeholder='Enter Payment Method' name='Message'></input>
+                                <input type='password' placeholder='Enter Payment Method' name='Payment'></input>
                             </div>
                         </div>
                     </form>
