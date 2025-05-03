@@ -38,7 +38,7 @@ const App = () => {
   {
         const searchfilter = HomeProduct.filter((x) => 
         {
-          return x.cat === search
+          return x.cat.includes(search) || x.Name.includes(search)
         })
         setShop(searchfilter)
   }
