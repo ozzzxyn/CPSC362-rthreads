@@ -21,7 +21,20 @@ const clearcart = () =>
   return (
     <>
     <div className='payment'>
+
+        {
+            cart.length === 0 &&
+            <>
+            <div className='empty_cart'>
+                <h2>Your Cart is Empty</h2>
+                <Link to='/shop'><button>Shop Now</button></Link>
+            </div>
+            </>
+        }
         <div>
+        {
+            cart.length > 0 &&
+            <>
             <div className='container'>
                 <div className='form'>
                     <h2>#Check Out</h2>
@@ -61,9 +74,12 @@ const clearcart = () =>
                     </form>
                 </div>
             </div>
+            </>
+        }
         </div>
         <div className='bottom'>
             {
+                cart.length > 0 &&
                 <>
                 <div className='Total'>
                     <h4>Total: ${total.toFixed(2)}</h4>
@@ -75,6 +91,7 @@ const clearcart = () =>
                 </>
             }
         </div>
+        
     </div>
     </>
   )
