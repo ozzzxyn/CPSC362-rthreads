@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Payment = ({cart, setCart}) => {
 //Total price
 const subtotal = cart.reduce((price, item) => price + item.qty * item.price, 0)
-const shipping = (total > 30) ? 0 : 20;
+const shipping = (subtotal > 30) ? 0 : 20;
 const tax = subtotal * 0.0725;
 const total = (subtotal + shipping + tax);
 
