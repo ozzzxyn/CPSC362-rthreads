@@ -89,9 +89,18 @@
     background: none;
     background: #a42028;
     cursor: pointer;
+    transition: 0.3s;
 }
 .contact .container .form button:hover 
 {
     background: #f02e3a;
     color: #ffffff;
+    scale: 1.114;
+    transition: 0.3s;
+}
+
+.contact .container .form button:active
+{
+    background: #2ff04c;
+    transition: 0.3s;
 }

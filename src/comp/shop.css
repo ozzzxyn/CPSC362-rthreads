@@ -96,6 +96,7 @@
 .shop .container .left_box .category .box ul li:hover
 {
     color: #b82831;
+
 }
 .shop .container .left_box .banner
 {
@@ -107,6 +108,7 @@
 {
     width: 100%;
     object-fit: cover;
+    
 }
 .shop .container .right_box
 {
@@ -413,6 +415,7 @@
     scale: 1;
     border-radius: 10px;
     transition: .5s;
+    user-select: none;
 }
 
 .product_detail .container .info button:hover
@@ -428,6 +431,7 @@
     font-weight: 600;
     cursor: pointer;
     scale: 1.11;
+    user-select: none;
 }
 
 .product_detail .container .info button:active

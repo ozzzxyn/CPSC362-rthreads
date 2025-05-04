@@ -21,20 +21,20 @@
     max-width: 100%;
     display: flex;
     padding: 10px 10px;
-    background: #f6f7f8;
+    background: #dfdfe0;
 }
 
 .header .top_header .icon
 {
     margin-left: 20px;
-    color: #ababab;
+    color: #454545;
     font-size: 19px;
 }
 
 .header .top_header .info p
 {
     margin-left: 10px;
-    color: #8a8a8a;
+    color: #565656;
 
 }
 .header .mid_header
@@ -172,6 +172,7 @@
     display: flex;
     background: #232323;
     justify-content: space-between;
+    position:relative;
 }
 
 .header .last_header .user_profile

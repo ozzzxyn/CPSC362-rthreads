@@ -4,13 +4,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
 
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0Provider
-    domain="dev-auhs4av75l3mcizg.us.auth0.com"
-    clientId="TYTgaew94x4cM3NIgrg8c8ABZJAvzmHC"
+    domain={domain}
+    clientId={clientId}
+    //redirectURi={window.location.origin}
+
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      audience: "https://" + domain + "/api/v2/",
+      scope: 'openid profile email'
+      //"read:current_user update:current_user_metadata"
     }}
   >
       

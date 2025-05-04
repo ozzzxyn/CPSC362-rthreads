@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Product Manager</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    h1 { text-align: center; }
+    form, .product-list { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+    button { padding: 8px 12px; margin-right: 10px; }
+    .product-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Admin: Manage Products</h1>
+
+  <form id="product-form">
+    <input type="hidden" id="product-id">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="price" placeholder="Price" required step="0.01">
+    <input type="text" id="image" placeholder="Image URL or Path" required>
+    <input type="text" id="cat" placeholder="Category" required>
+    <input type="text" id="disc" placeholder="Description" required>
+    <button type="submit">Save Product</button>
+    <button type="button" onclick="clearForm()">Clear</button>
+  </form>
+
+  <div class="product-list" id="product-list"></div>
+
+  <script>
+    const API = 'http://localhost:5000/api/products';
+    const list = document.getElementById('product-list');
+    const form = document.getElementById('product-form');
+
+    async function loadProducts() {
+      const res = await fetch(API);
+      const products = await res.json();
+      list.innerHTML = '';
+      products.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'product-item';
+        div.innerHTML = `
+          <strong>${p.Name}</strong> - $${p.price} (${p.cat})<br>
+          <em>${p.disc}</em><br>
+          <img src="${p.image}" alt="" width="100"><br>
+          <button onclick='editProduct(${JSON.stringify(p)})'>Edit</button>
+          <button onclick='deleteProduct("${p.id}")'>Delete</button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    form.onsubmit = async e => {
+      e.preventDefault();
+      const id = document.getElementById('product-id').value;
+      const data = {
+        Name: document.getElementById('name').value,
+        price: Number(document.getElementById('price').value),
+        image: document.getElementById('image').value,
+        cat: document.getElementById('cat').value,
+        disc: document.getElementById('disc').value
+      };
+      if (id) {
+        // Updating the product
+        await fetch(`${API}/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } else {
+        // Adding new product
+        await fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      }
+      clearForm();
+      loadProducts();
+    };
+
+    function editProduct(p) {
+      document.getElementById('product-id').value = p.id;
+      document.getElementById('name').value = p.Name;
+      document.getElementById('price').value = p.price;
+      document.getElementById('image').value = p.image;
+      document.getElementById('cat').value = p.cat;
+      document.getElementById('disc').value = p.disc;
+    }
+
+    async function deleteProduct(id) {
+      if (confirm('Are you sure you want to delete this product?')) {
+        await fetch(`${API}/${id}`, { method: 'DELETE' });
+        loadProducts();
+      }
+    }
+
+    function clearForm() {
+      form.reset();
+      document.getElementById('product-id').value = '';
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>

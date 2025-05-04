@@ -1,6 +1,6 @@
 import React from 'react'
 import './cart.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FaWindowClose } from "react-icons/fa";
 
 
@@ -8,6 +8,22 @@ import { FaWindowClose } from "react-icons/fa";
 
 const Cart = ({cart, setCart}) => {
 
+    const navigate = useNavigate();
+  
+    const handleNavigation = (path, scrollPosition = 0) => {
+        navigate(path);
+        window.scrollTo({
+        top: scrollPosition,
+        left: 0,
+        behavior: 'smooth'
+        });
+    };
+
+
+
+
+
+    
     // Increase quanity of cart product
     const incqty = (product) =>
     {
@@ -60,7 +76,18 @@ const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
             <>
             <div className='empty_cart'>
                 <h2>Your Cart is Empty</h2>
-                <Link to='/shop'><button>Shop Now</button></Link>
+                <a 
+                                  href='/about' 
+                                  className='link'
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleNavigation('/shop', 320); // Scroll to 300px from top
+                                  }}
+                                  data-scroll-position="300"
+                                >
+                                    <button>Shop Now</button>
+                                </a>
+                
             </div>
             </>
         }
@@ -79,7 +106,8 @@ const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
                                 <h4>{curElm.cat}</h4>
                                 <h3>{curElm.Name}</h3>
                                 <p>Price: ${curElm.price}</p>
-                                <p>Total: ${curElm.price * curElm.qty}</p>
+                                <p>Total: ${ (curElm.price * curElm.qty).toFixed(2) }</p>
+
                                 </div>
                                 <div className='quantity'>
                                     <button onClick={() => incqty (curElm)}>+</button>
@@ -101,7 +129,8 @@ const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
                 cart.length > 0 &&
                 <>
                 <div className='Total'>
-                    <h4>Sub Total: ${total}</h4>
+                    <h4>Sub Total: ${ total.toFixed(2) }</h4>
+
                 </div>
                 <Link to='/payment'><button>Checkout</button></Link>
                 </>

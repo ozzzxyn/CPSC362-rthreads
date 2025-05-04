@@ -32,6 +32,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
             <input type='text' value ={search} placeholder='Search' onChange={(e) => setSearch(e.target.value)}></input>
             <button onClick={searchproduct}><FiSearch /></button>
           </div>
+
           {
             isAuthenticated ?
             // if user is login then Logout button will appear
@@ -54,6 +55,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
             </div>
           </div>
           }
+
         </div>
         <div className='last_header'>
           <div className='user_profile'>

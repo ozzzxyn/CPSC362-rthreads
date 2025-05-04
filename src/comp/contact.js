@@ -29,7 +29,7 @@ const Contact = () => {
             })
         }
         const send = await fetch(
-            'https://cpsc362-rthreads-default-rtdb.firebaseio.com/Message.json', option
+            'https://cpsc362-rthreads-default-rtdb.firebaseio.com/Contact.json', option
             )
 
         if (send) {
