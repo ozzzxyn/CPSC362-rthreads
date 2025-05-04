@@ -44,7 +44,8 @@
         div.innerHTML = `
           <strong>${p.Name}</strong> - $${p.price} (${p.cat})<br>
           <em>${p.disc}</em><br>
-          <img src="${p.image}" alt="" width="100"><br>
+          <img src="/image/${p.image}.webp" alt="" width="100"><br>
+
           <button onclick='editProduct(${JSON.stringify(p)})'>Edit</button>
           <button onclick='deleteProduct("${p.id}")'>Delete</button>
         `;

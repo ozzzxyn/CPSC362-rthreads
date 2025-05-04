@@ -46,6 +46,7 @@
 {
     border: 3px solid #f6f6f6;
     width: 250px;
+    margin-top: 400px;
 }
 
 .shop .container .left_box .category .header
@@ -53,6 +54,7 @@
     max-width: 100%;
     padding: 10px 20px;
     background: #f6f6f6;
+    
 
 }
 
@@ -62,6 +64,10 @@
     color: #232323;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 .shop .container .left_box .category .box
@@ -127,6 +133,7 @@
     transition: .3s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .shop .container .right_box
@@ -137,25 +144,23 @@
 .shop .container .right_box .banner
 {
     max-width: 100%;
+    margin-right: 100px;
 }
 .shop .container .right_box .banner .img_box img
 {
-    width: 85%;
+    width: 95%;
     height: 70%;
-    margin-left: 8%;
     margin-bottom: 25px;
     object-fit: cover;
     border-radius: 25px;
     opacity: 95%;
     transition: .3s;
     user-select: none;
+    scale: 1;
 }
 
 .shop .container .right_box .banner .img_box img:hover
 {
-    width: 85%;
-    height: 70%;
-    margin-left: 8%;
     margin-bottom: 25px;
     object-fit: cover;
     border-radius: 50px;
@@ -163,8 +168,48 @@
     transition: .3s;
     cursor: pointer;
     user-select: none;
-    scale: 1.0120;
+    scale: 1.113;
+    
 }
+
+.shop .container .left_box .banner_ad
+{
+    max-width: 100%;
+}
+
+.shop .container .left_box .banner_ad .img_box_ad
+{
+    max-width: 100%;
+}
+
+.shop .container .left_box .banner_ad .img_box_ad img
+{
+    width: 85%;
+    /* height: 70%; */
+    margin-left: 1%;
+    margin-top: 5%;
+    margin-bottom: 25px;
+    object-fit: cover;
+    border-radius: 50px;
+    opacity: 95%;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+    scale: 1;
+    transition: .3;
+}
+
+.shop .container .left_box .banner_ad .img_box_ad img:hover
+{
+    scale: 1.113;
+    transition: .3s;
+    margin-left: 10%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
 
 .shop .container .right_box .product_box
 {
@@ -213,6 +258,15 @@
 {
     width: 100%;
     height: 270px;
+    transition: .3s;
+}
+
+.shop .container .right_box .product_box .product_container .box .img_box img:hover
+{
+    /* scale: 1.106; */
+    transition: .3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon
@@ -224,6 +278,7 @@
     margin-left: 5px;
     transition: 0.5s;
     scale: .5;
+    
 }
 
 .shop .container .right_box .product_box .product_container .box:hover .img_box .icon
@@ -255,6 +310,8 @@
 {
     color: #fff;
     background: #f02f40;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    scale: 1.113;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon li:active

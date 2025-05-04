@@ -67,6 +67,7 @@
 {
     max-width: 100%;
     padding: 10px 20px;
+    margin-bottom: 10px;
 }
 
 .cart .container .box
@@ -75,13 +76,27 @@
     width: 100%;
     border-bottom: 2px solid #f6f6f6;
     height: 250px;
-    margin-top: 10px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    
 }
 
 .cart .container .box .img_box img
 {
     width: 270px;
+    border-radius: 5px;
     height: 100%;
+    border: 2px solid #f6a1a8;
+    transition: .2s;
+}
+
+.cart .container .box .img_box img:hover
+{
+    cursor: pointer;
+    scale: 1.113;
+    transition: .2s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 4;
 }
 .cart .container .box .detail
 {
@@ -89,12 +104,14 @@
     width: 100%;
     margin-top: 10px;
     margin-left: 30px;
+    
 }
 
 .cart .container .box .detail .info
 {
     margin-top: 40px;
     margin-left: 60px;
+    
 
 }
 

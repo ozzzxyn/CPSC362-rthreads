@@ -46,7 +46,7 @@ const handleCategoryClick = (category) => {
           </button>
           <div className='container'>
             <div className='img_box'>
-              <img src={`http://localhost:5000${detail.image}`} alt='' />
+              <img src={`http://localhost:5000/image/${detail.image}.webp`} alt='' />
             </div>
             <div className='info'>
               <h4># {detail.cat}</h4>
@@ -61,7 +61,6 @@ const handleCategoryClick = (category) => {
 
       <div className='shop'>
         <h2># Shop</h2>
-        <p>Home . Shop</p>
         <div className='container'>
           <div className='left_box'>
             <div className='category'>
@@ -72,15 +71,21 @@ const handleCategoryClick = (category) => {
                 <ul>
                   <li onClick={() => fetchProducts()}># All</li>
                   <li onClick={() => handleCategoryClick("pants")}># Pants</li>
-                  <li onClick={() => handleCategoryClick("shirt")}># Shirt</li>
-                  <li onClick={() => handleCategoryClick("jacket")}># Jacket</li>
+                  <li onClick={() => handleCategoryClick("shirt")}># Shirts</li>
+                  <li onClick={() => handleCategoryClick("jacket")}># Jackets</li>
                   <li onClick={() => handleCategoryClick("flannel")}># Flannels</li>
+                  <li onClick={() => handleCategoryClick("hat")}># Hats</li>
                 </ul>
               </div>
             </div>
             <div className='banner'>
               <div className='img_box'>
                 <img src='image/shipping.png' alt='' />
+              </div>
+            </div>
+            <div className='banner_ad'>
+              <div className='img_box_ad'>
+                <img src='image/rthreadsad.webp' alt='' />
               </div>
             </div>
           </div>
@@ -97,7 +102,7 @@ const handleCategoryClick = (category) => {
                 {products.map((curElm) => (
                   <div className='box' key={curElm.id}>
                     <div className='img_box'>
-                      <img src={`http://localhost:5000${curElm.image}`} alt='' />
+                      <img src={`http://localhost:5000/image/${curElm.image}.webp`} alt='' />
                       <div className='icon'>
                         <li><FaHeart /></li>
                         <li onClick={() => detailpage(curElm)}><FaRegEye /></li>

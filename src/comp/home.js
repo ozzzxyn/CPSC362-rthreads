@@ -61,7 +61,7 @@ const Home = ({ addtocart }) => {
                     trendingProduct.map((curElm) => (
                       <div className='box' key={curElm.id}>
                         <div className='img_box'>
-                          <img src={`http://localhost:5000${curElm.image}`} alt='' />
+                          <img src={`http://localhost:5000/image/${curElm.image}.webp`} alt='' />
                           <div className='icon'>
                             <div className='icon_box'><FaRegEye /></div>
                             <div className='icon_box'><FaHeart /></div>

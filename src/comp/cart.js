@@ -99,7 +99,7 @@ const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
                         <>
                         <div className='box'>
                             <div className='img_box'>
-                                <img src={curElm.image} alt=''></img>
+                                <img src={`http://localhost:5000/image/${curElm.image}.webp`} alt=''></img>
                             </div>
                             <div className='detail'>
                                 <div className='info'>
