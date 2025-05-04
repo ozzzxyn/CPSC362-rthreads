@@ -80,7 +80,7 @@ const handleCategoryClick = (category) => {
             </div>
             <div className='banner'>
               <div className='img_box'>
-                <img src='image/bannerplaceholder2.png' alt='' />
+                <img src='image/shipping.png' alt='' />
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ const handleCategoryClick = (category) => {
           <div className='right_box'>
             <div className='banner'>
               <div className='img_box'>
-                <img src='image/bannerplaceholder4.png' alt='' />
+                <img src='image/bannerimage1.jpg' alt='' />
               </div>
             </div>
             <div className='product_box'>

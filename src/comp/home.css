@@ -522,14 +522,16 @@
 .home .brands-header .brands-divider h3
 {
     margin-top: 10px;
-    font-family: Oxygen;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     background-color: white;
     font-weight: 900;
     letter-spacing: 8px;
     word-spacing: 10px;
-    
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     animation: moving 2.0s ease-out infinite;
 }
 
@@ -554,6 +556,7 @@
     width: 150%;
     transition: .5s;
     border-radius: 50px;
+    user-select: none;
 }
 
 .home .banners .container .left_box .box img:hover
@@ -564,6 +567,7 @@
     scale: 1.115;
     transition: .5s;
     cursor: pointer;
+    user-select: none;
 }
 
 .home .banners .container .left_box .box2 img
@@ -574,6 +578,7 @@
     width: 130%;
     border-radius: 50px;
     transition: 0.5s;
+    user-select: none;
 }
 
 .home .banners .container .left_box .box2 img:hover
@@ -585,6 +590,7 @@
     scale: 1.115;
     transition: .5s;
     cursor: pointer;
+    user-select: none;
 }
 
 .home .banners .container .mid_box img
@@ -596,6 +602,7 @@
     object-fit: cover;
     border-radius: 50px;
     transition: .5s;
+    user-select: none;
 }
 
 .home .banners .container .mid_box img:hover
@@ -609,6 +616,7 @@
     scale: 1.115;
     transition: .5s;
     cursor: pointer;
+    user-select: none;
 }
 
 .home .banners .container .right_box .top img
@@ -620,6 +628,7 @@
     object-fit: cover;
     border-radius: 50px;
     transition: .5s;
+    user-select: none;
 }
 
 .home .banners .container .right_box .top img:hover
@@ -633,6 +642,7 @@
     scale: 1.115;
     transition: .5s;
     cursor: pointer;
+    user-select: none;
 }
 
 .home .banners .container .right_box .bottom img
@@ -643,6 +653,7 @@
     object-fit: cover;
     border-radius: 50px;
     transition: 0.5s;
+    user-select: none;
 }
 
 .home .banners .container .right_box .bottom img:hover
@@ -655,6 +666,7 @@
     scale: 1.115;
     transition: 0.5s;
     cursor: pointer;
+    user-select: none;
 }
 
 .home .product_type
