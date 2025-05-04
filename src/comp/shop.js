@@ -61,6 +61,7 @@ const handleCategoryClick = (category) => {
 
       <div className='shop'>
         <h2># Shop</h2>
+        <p>Home . Shop</p>
         <div className='container'>
           <div className='left_box'>
             <div className='category'>

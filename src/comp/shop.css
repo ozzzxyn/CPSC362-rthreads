@@ -265,8 +265,8 @@
 {
     /* scale: 1.106; */
     transition: .3s;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    
+    user-select: none;
+    border-radius: 15px;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon
@@ -450,13 +450,14 @@
     padding: 20px 20px;
     background: #f6f6f6;
     border-radius: 10px;
+    
 }
 
 .product_detail .container .img_box img
 {
     width: 250px;
     height: 250px;
-
+    object-fit: cover;
 }
 
 .product_detail .container .info
