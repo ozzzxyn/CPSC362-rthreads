@@ -34,9 +34,9 @@ const Home = ({ addtocart }) => {
       <div className='home'>
         <div className='top_banner'>
           <div className='content'>
-            <h3>Product detail here</h3>
-            <h2>product here</h2>
-            <p>Offer for product order here</p>
+            <h3>double breasted regular suit jacket</h3>
+            <h2>ASOS DESIGN</h2>
+            <p>Check this offer here!</p>
             <Link to='/shop' className='link'>Shop Now!</Link>
           </div>
         </div>
