@@ -557,6 +557,7 @@
     transition: .5s;
     border-radius: 50px;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0);
 }
 
 .home .banners .container .left_box .box img:hover
@@ -568,6 +569,7 @@
     transition: .5s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .home .banners .container .left_box .box2 img
@@ -579,6 +581,7 @@
     border-radius: 50px;
     transition: 0.5s;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0);
 }
 
 .home .banners .container .left_box .box2 img:hover
@@ -591,6 +594,7 @@
     transition: .5s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .home .banners .container .mid_box img
@@ -603,6 +607,7 @@
     border-radius: 50px;
     transition: .5s;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0);
 }
 
 .home .banners .container .mid_box img:hover
@@ -617,6 +622,7 @@
     transition: .5s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .home .banners .container .right_box .top img
@@ -629,6 +635,7 @@
     border-radius: 50px;
     transition: .5s;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0);
 }
 
 .home .banners .container .right_box .top img:hover
@@ -643,6 +650,7 @@
     transition: .5s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .home .banners .container .right_box .bottom img
@@ -654,6 +662,8 @@
     border-radius: 50px;
     transition: 0.5s;
     user-select: none;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0);
 }
 
 .home .banners .container .right_box .bottom img:hover
@@ -667,6 +677,7 @@
     transition: 0.5s;
     cursor: pointer;
     user-select: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .home .product_type
