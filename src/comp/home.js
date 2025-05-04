@@ -117,24 +117,30 @@ const Home = ({ addtocart }) => {
             </div>
           </div>
         </div>
-
+        <div className="brands-header">
+          <div className="brands-divider">
+              <h3>Our Brands</h3>
+          </div>
+        </div>
         <div className='banners'>
           <div className='container'>
             <div className='left_box'>
               <div className='box'>
-                <img src='image/bannerplaceholder.jpg' alt='banner' />
+                <img src='image/fashion1.webp' alt='banner' />
               </div>
-              <div className='box'>
-                <img src='image/bannerplaceholder2.png' alt='banner' />
+              <div className='box2'>
+                <img src='image/fashion2.avif' alt='banner' />
               </div>
+            </div>
+            <div className='mid_box'>
+              <img src='image/fashion3.avif' alt='' />
             </div>
             <div className='right_box'>
               <div className='top'>
-                <img src='image/bannerplaceholder3.png' alt='' />
-                <img src='image/bannerplaceholder4.png' alt='' />
+                <img src='image/fashion4.webp' alt='' />
               </div>
               <div className='bottom'>
-                <img src='image/bannerplaceholder5.webp' alt='' />
+                <img src='image/fashion5.avif' alt='' />
               </div>
             </div>
           </div>
