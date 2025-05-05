@@ -1,58 +1,81 @@
 const request = require("supertest");
 const express = require("express");
-const path = require("path");
-const admin = require("firebase-admin");
+const app = require("./index"); // Adjust if exported differently
 
-// Mock Firebase for test (optional but avoids real DB access)
+// Mock Firebase Admin
 jest.mock("firebase-admin", () => {
-  const firestore = {
-    collection: jest.fn().mockReturnThis(),
-    doc: jest.fn().mockReturnThis(),
-    where: jest.fn().mockReturnThis(),
-    get: jest.fn().mockResolvedValue({ docs: [] }),
-    add: jest.fn().mockResolvedValue({ id: "mocked-id" }),
-    update: jest.fn(),
-    delete: jest.fn(),
-  };
+  const data = [
+    { id: "1", data: () => ({ Name: "Shirt A", cat: "shirt" }) },
+    { id: "2", data: () => ({ Name: "Pants B", cat: "pants" }) },
+  ];
+
   return {
-    credential: { cert: jest.fn() },
     initializeApp: jest.fn(),
-    firestore: () => firestore,
+    credential: {
+      cert: jest.fn(),
+    },
+    firestore: () => ({
+      collection: jest.fn().mockReturnValue({
+        get: jest.fn().mockResolvedValue({ docs: data }),
+        where: jest.fn().mockReturnThis(),
+        doc: jest.fn().mockImplementation((id) => ({
+          get: jest.fn().mockResolvedValue({
+            exists: id === "1",
+            data: () => ({ Name: "Updated", cat: "updated" }),
+          }),
+          update: jest.fn(),
+          delete: jest.fn(),
+        })),
+        add: jest.fn().mockResolvedValue({ id: "newId" }),
+      }),
+    }),
   };
 });
 
-// Import the app after mocking
-let app;
-let server;
-
-beforeAll(() => {
-  app = require("./index"); // ensure you export `app` from index.js
-  server = app.listen(5001); // Start the server manually
-});
-
-afterAll((done) => {
-  server.close(done); // Close the server after tests
-});
-
-describe("Backend API routes", () => {
-  it("should respond to GET /admin", async () => {
-    const res = await request(app).get("/admin");
-    expect(res.statusCode).toBe(200);
-    expect(res.headers["content-type"]).toMatch(/html/);
-  });
-
-  it("should respond with empty product list on GET /api/products", async () => {
+describe("Backend API Tests", () => {
+  it("GET /api/products - returns all products", async () => {
     const res = await request(app).get("/api/products");
     expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
+    expect(res.body.length).toBeGreaterThan(0);
   });
 
-  it("should respond with 201 on POST /api/products", async () => {
+  it("GET /api/products?category=shirt - filters by category", async () => {
+    const res = await request(app).get("/api/products?category=shirt");
+    expect(res.statusCode).toBe(200);
+    expect(res.body[0].cat).toBe("shirt");
+  });
+
+  it("POST /api/products - adds a product", async () => {
     const res = await request(app)
       .post("/api/products")
-      .send({ name: "Test Product", price: 100 });
+      .send({ Name: "Hat", cat: "accessory" });
     expect(res.statusCode).toBe(201);
     expect(res.body).toHaveProperty("id");
   });
-});
 
+  it("PUT /api/products/:id - updates a product", async () => {
+    const res = await request(app)
+      .put("/api/products/1")
+      .send({ Name: "Updated", cat: "updated" });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.Name).toBe("Updated");
+  });
+
+  it("DELETE /api/products/:id - deletes a product", async () => {
+    const res = await request(app).delete("/api/products/1");
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toHaveProperty("message", "Product deleted successfully");
+  });
+
+  it("GET /products - returns admin page", async () => {
+    const res = await request(app).get("/products");
+    expect(res.statusCode).toBe(200);
+    expect(res.header["content-type"]).toMatch(/html/);
+  });
+
+  it("GET /shop - returns shop page", async () => {
+    const res = await request(app).get("/shop");
+    expect(res.statusCode).toBe(200);
+    expect(res.header["content-type"]).toMatch(/html/);
+  });
+});

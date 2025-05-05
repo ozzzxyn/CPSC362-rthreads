@@ -115,6 +115,10 @@ app.get("/shop", (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}/admin`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}/admin`);
+  });
+}
+
+module.exports = app;
