@@ -29,7 +29,12 @@ const Shop = ({ Filter, allcatefilter, addtocart }) => {
   };
 
   const handleCategoryClick = (category) => {
-    fetchProducts(category);
+    if (category === "all") {
+      setProducts(allProducts);
+    } else {
+      const filtered = allProducts.filter(product => product.cat?.toLowerCase() === category.toLowerCase());
+      setProducts(filtered);
+    }
   };
 
   const handleSearchClick = () => {

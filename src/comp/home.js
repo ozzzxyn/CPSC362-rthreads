@@ -86,7 +86,7 @@ const Home = ({ addtocart }) => {
             <div className='left_box'>
               <div className='header'>
                 <div className='heading'>
-                  <h2 onClick={allTrendingProduct}>Our products by Popularity!</h2>
+                  <h2>Our products by Popularity!</h2>
                 </div>
                 <div className='cate'>
                   <h3 onClick={() => filtercate('new')}>New</h3>
