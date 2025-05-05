@@ -124,11 +124,11 @@
 .home .trending .container .left_box .header .heading h2
 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 17px;
     color: #232323;
     margin-top: 5px;
-    cursor: pointer;
     font-family: "Oxygen";
+    user-select: none;
     
 }
 
@@ -269,6 +269,29 @@
     letter-spacing: 1px;
     font-family: "Oxygen";
 }
+
+.home .trending .container .left_box .products .container .box .info:active p
+{
+    transition: .5s;
+    color: #2ff04c;
+    animation: Pricetext 2s ease-in-out infinite;
+}
+
+@keyframes Pricetext {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    scale: 1.3;
+    transform: translateY(-3px);
+    transform: translateX(15px);
+  }
+  100% {
+    
+    transform: translateY(0);
+  }
+}
+
 .home .trending .container .left_box .products .container .box .info .btn
 {
     margin-top: 10px;
@@ -295,6 +318,11 @@
 
 }
 
+.home .trending .container .left_box .products .container .box .info .btn:active
+{
+    background: #2ff04c;
+}
+
 .home .trending .container .right_box
 {
     padding: 10px 20px;
@@ -310,6 +338,7 @@
 {
     width: 100%;
     border: 4px solid #f6f7f8;
+    border-radius: 15px;
 }
 
 .home .trending .container .right_box .right_container .testimonial .head
@@ -317,10 +346,12 @@
     padding: 10px 10px;
     width: 100%;
     background: #f6f7f8;
+    
 }
 
 .home .trending .container .right_box .right_container .testimonial .head h3
 {
+    
     text-align: center;
     color: #232323;
     font-size: 16px;
@@ -332,18 +363,38 @@
 .home .trending .container .right_box .right_container .testimonial .detail
 {
     padding: 10px 20px;
+    border-radius: 19px;
+    
+}
+
+.home .trending .container .right_box .right_container .testimonial .detail .img_box
+{
+    max-width: 100%;
+    
 }
 
 .home .trending .container .right_box .right_container .testimonial .detail .img_box img
 {
-
-    margin-top: 40px;
-    margin-left: 50px;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 30px;
+    content: cover;
+    
 }
 
 .home .trending .container .right_box .right_container .testimonial .detail .info
 {
     margin-top: 10px;
+    
+}
+
+.home .trending .container .right_box .right_container .testimonial .detail .info h3
+{
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .home .trending .container .right_box .right_container .testimonial .detail .info h3
@@ -357,9 +408,9 @@
 .home .trending .container .right_box .right_container .testimonial .detail .info h4
 {
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10px;
-    color: #cd1e76;
+    color: #a42024;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -370,7 +421,7 @@
     text-align: center;
     font-weight: 600;
     color: #232323;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -380,6 +431,7 @@
     background: #f6f7f8;
     margin-top: 20px;
     padding: 10px 10px;
+    border-radius: 10px;
 }
 
 .home .trending .container .right_box .right_container .newsletter .head

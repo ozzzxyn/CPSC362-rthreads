@@ -1,6 +1,5 @@
 import React from 'react'
 import { MdLocalShipping } from 'react-icons/md';
-import { FiSearch } from "react-icons/fi";
 import { IoMdLogIn } from "react-icons/io";
 import { useAuth0 } from "@auth0/auth0-react";
 import { RiLogoutCircleLine } from "react-icons/ri";
@@ -28,10 +27,19 @@ const Nav = ({search, setSearch, searchproduct}) => {
               <img src='image/logo_cpsc362_232.png' alt='logo'></img>
             </div>
           </Link>
+          
+          {/* 
           <div className='search_box'>
-            <input type='text' value ={search} placeholder='Search' onChange={(e) => setSearch(e.target.value)}></input>
+            <input
+              type='text'
+              value={search}
+              placeholder='Search'
+              onChange={(e) => setSearch(e.target.value)}
+            />
             <button onClick={searchproduct}><FiSearch /></button>
           </div>
+          */}
+
 
           {
             isAuthenticated ?

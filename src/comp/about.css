@@ -9,6 +9,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 3rem 1.5rem;
+    
   }
   
   .about-title {
@@ -17,12 +18,16 @@
     text-align: center;
     color: #a42024;
     margin-bottom: 2rem;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .about-paragraph {
     font-size: 1.125rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-family: "Oxygen";
   }
   
   .about-signoff {
@@ -31,5 +36,6 @@
     text-align: center;
     font-weight: 600;
     margin-top: 2rem;
+    font-family: "Oxygen";
   }
   

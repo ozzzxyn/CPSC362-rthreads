@@ -169,7 +169,60 @@
     cursor: pointer;
     user-select: none;
     scale: 1.113;
+}
+
+.shop .container .right_box .search_box input
+{
+    margin-left: 450px;
+    padding: 10px 10px;
+    outline: none;
+    background: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 80px;
+    scale: 1.23;
+    width: 250px;
+    border: 1px solid #858585;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Oxygen";
+}
+
+.shop .container .right_box .search_box input:hover
+{
+    border: 1px solid #f02e3a;
+}
+
+.shop .container .right_box .search_box button
+{
+    padding: 10px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    outline: none;
+    scale: 1.3;
+    margin-left: 33px;
+    border: 1px solid#ffffff;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-right: 30px;
+    transition: 0.5s;
+    font-weight: 600;
     
+}
+
+.shop .container .right_box .search_box button:hover
+{
+    background: #f02e3a;
+    border: 1px solid #f02e3a;
+    color: #ffffff;
+    
+}
+
+.shop .container .right_box .search_box input::placeholder
+{
+    color: rgb(195, 195, 195);
 }
 
 .shop .container .left_box .banner_ad
@@ -249,7 +302,26 @@
     margin-left: 15px;
     margin-top: 40px;
     border-radius: 10px;
+    transition: .4s;
+
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
 }
+
+/* Optional: delay between each item using nth-child */
+.product_container .product-fade-in:nth-child(1) { animation-delay: 0s; }
+.product_container .product-fade-in:nth-child(2) { animation-delay: 0.1s; }
+.product_container .product-fade-in:nth-child(3) { animation-delay: 0.2s; }
+/* ...and so on, or use JS to generate delays dynamically if needed */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .shop .container .right_box .product_box .product_container .box .img_box
 {
     display: flex;

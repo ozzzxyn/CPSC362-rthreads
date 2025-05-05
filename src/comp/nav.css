@@ -14,14 +14,20 @@
 .header
 {
     width: 100%;
-    background-color: #a42024;
+    /* background-color: #a42024; */
+    transition: 4s;
+    background: linear-gradient(to left, #20A4A0, #f02f40, #a42024);
+    border-radius: 12px;
 }
+
 .header .top_header
 {
     max-width: 100%;
     display: flex;
     padding: 10px 10px;
     background: #dfdfe0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .header .top_header .icon
@@ -173,6 +179,12 @@
     background: #232323;
     justify-content: space-between;
     position:relative;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    border-bottom-style:dotted;
+    border-right-style: dotted;
+    border-left-style: dotted;
 }
 
 .header .last_header .user_profile

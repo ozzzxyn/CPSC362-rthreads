@@ -10,7 +10,9 @@
 {
     width: 100%;
     padding: 0px 0px;
-    background: #971d26;
+    /* background: #971d26; */
+    background: linear-gradient(to left, #20A4A0, #f02f40, #a42024);
+    
 }
 
 .footer .container
@@ -26,7 +28,11 @@
     height: 65px;
     display: flex;
     top: -10px;
-    border-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-style:dotted;
+    border-right-style: dotted;
+    border-left-style: dotted;
     position: relative;
     
 }
@@ -96,6 +102,8 @@
     height: 200px;
     align-items: center;
     background-color: #971d26;
+    border: 10px solid #232323;
+    border-radius: 30px;
 }
 
 .footer .container .right_box .header img
@@ -132,6 +140,7 @@
     background-color: #8a1a25;
     border-radius: 2px;
     margin-bottom: 90px;
+    background: linear-gradient(to top, #20a4a000, #bb2b39);
 }
 
 .footer .container .right_box .bottom .box h3
@@ -189,5 +198,7 @@
 
 .footer .container .right_box .bottom .map iframe
 {
-    margin-left: 50%;
+    margin-left: 40%;
+    margin-top: -10%;
+    border-radius: 20px;
 }

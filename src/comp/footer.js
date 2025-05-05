@@ -31,8 +31,8 @@ const Footer = () => {
                         <FaPiggyBank />
                     </div>
                     <div className='detail'>
-                        <h3>Great Savings</h3>
-                        <p>Lorem ipsum</p>
+                        <h3>Best Deals!</h3>
+                        <p>On the most popular brands!</p>
                     </div>
                 </div>
                     <div className='box'>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                     <div className='detail'>
                         <h3>Free Delivery</h3>
-                        <p>Lorem ipsum</p>
+                        <p>Only applicable on purchases over $30</p>
                     </div>
                 </div>
                 <div className='box'>
@@ -49,8 +49,8 @@ const Footer = () => {
                         <MdOutlineSupportAgent />
                     </div>
                     <div className='detail'>
-                        <h3>24/7 Support</h3>
-                        <p>Lorem ipsum</p>
+                        <h3>Contact our Team!</h3>
+                        <p>Head to our Contact page to reach us!</p>
                     </div>
                 </div>
                 <div className='box'>
@@ -59,7 +59,7 @@ const Footer = () => {
                     </div>
                     <div className='detail'>
                         <h3>Money Back Guaranteed!</h3>
-                        <p>Lorem ipsum</p>
+                        <p>2-Weeks Moneyback guaranteed!</p>
                     </div>
                 </div>
             </div>

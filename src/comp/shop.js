@@ -1,39 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import './shop.css';
 import { FaHeart, FaRegEye, FaWindowClose } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
 const Shop = ({ Filter, allcatefilter, addtocart }) => {
   const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]); // Store all for search
   const [showDetail, setShowDetail] = useState(false);
   const [detail, setDetail] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-  fetchProducts(); // Load all products initially
-}, []);
+    fetchProducts(); // Load all products initially
+  }, []);
 
-const fetchProducts = (category = "") => {
-  const url = category
-    ? `http://localhost:5000/api/products?category=${category}`
-    : `http://localhost:5000/api/products`;
+  const fetchProducts = (category = "") => {
+    const url = category
+      ? `http://localhost:5000/api/products?category=${category}`
+      : `http://localhost:5000/api/products`;
 
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => setProducts(data))
-    .catch((err) => console.error("Failed to load products", err));
-};
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setAllProducts(data); // Store full data for filtering
+      })
+      .catch((err) => console.error("Failed to load products", err));
+  };
 
-const handleCategoryClick = (category) => {
-  fetchProducts(category); // fetch products by category
-};
+  const handleCategoryClick = (category) => {
+    fetchProducts(category);
+  };
 
+  const handleSearchClick = () => {
+    const searchWords = searchQuery.toLowerCase().split(" ").filter(Boolean);
+    const filtered = allProducts.filter(product => {
+      const name = product.Name.toLowerCase();
+      return searchWords.every(word => name.includes(word));
+    });
+    setProducts(filtered);
+  };
   
 
-  const detailpage = (product) => {
+  const detailPage = (product) => {
     setDetail(product);
     setShowDetail(true);
   };
 
-  const closedetail = () => {
+  const closeDetail = () => {
     setShowDetail(false);
   };
 
@@ -41,7 +55,7 @@ const handleCategoryClick = (category) => {
     <>
       {showDetail && detail && (
         <div className='product_detail'>
-          <button className='close_btn' onClick={closedetail}>
+          <button className='close_btn' onClick={closeDetail}>
             <FaWindowClose />
           </button>
           <div className='container'>
@@ -97,25 +111,40 @@ const handleCategoryClick = (category) => {
                 <img src='image/bannerimage1.jpg' alt='' />
               </div>
             </div>
+            <div className='search_box'>
+              <input
+                type='text'
+                value={searchQuery}
+                placeholder='Search'
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => { if (e.key === 'Enter') handleSearchClick(); }}
+              />
+              <button type="button" onClick={handleSearchClick}><FiSearch /></button>
+            </div>
+
             <div className='product_box'>
               <h2>Shop Product</h2>
               <div className='product_container'>
-                {products.map((curElm) => (
-                  <div className='box' key={curElm.id}>
-                    <div className='img_box'>
-                      <img src={`http://localhost:5000/image/${curElm.image}.webp`} alt='' />
-                      <div className='icon'>
-                        <li><FaHeart /></li>
-                        <li onClick={() => detailpage(curElm)}><FaRegEye /></li>
+                {products.length > 0 ? (
+                  products.map((curElm) => (
+                    <div className='box' key={curElm.id}>
+                      <div className='img_box'>
+                        <img src={`http://localhost:5000/image/${curElm.image}.webp`} alt='' />
+                        <div className='icon'>
+                          <li><FaHeart /></li>
+                          <li onClick={() => detailPage(curElm)}><FaRegEye /></li>
+                        </div>
+                      </div>
+                      <div className='detail'>
+                        <h3>{curElm.Name}</h3>
+                        <p>${parseFloat(curElm.price).toFixed(2)}</p>
+                        <button onClick={() => addtocart(curElm)}>Add To Cart</button>
                       </div>
                     </div>
-                    <div className='detail'>
-                      <h3>{curElm.Name}</h3>
-                      <p>${parseFloat(curElm.price).toFixed(2)}</p>
-                      <button onClick={() => addtocart(curElm)}>Add To Cart</button>
-                    </div>
-                  </div>
-                ))}
+                  ))
+                ) : (
+                  <p>No products found.</p>
+                )}
               </div>
             </div>
           </div>

@@ -33,10 +33,18 @@ app.get('/admin', (req, res) => {
 app.get("/api/products", async (req, res) => {
   try {
     const { category } = req.query;
+
+    const { name } = req.query;
     let snapshot;
 
     if (category) {
       snapshot = await db.collection('products').where('cat', '==', category).get();
+    } else {
+      snapshot = await db.collection('products').get();
+    }
+
+    if (name) {
+      snapshot = await db.collection('products').where('Name', '==', name).get();
     } else {
       snapshot = await db.collection('products').get();
     }
